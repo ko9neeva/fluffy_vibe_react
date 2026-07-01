@@ -1,0 +1,96 @@
+/*шрифт, цвет*/
+*, .form-select{
+    font-family:"Tenor Sans", sans-serif;
+    font-weight:600;
+    font-style:normal;
+    color:rgba(0,0,0,.7)
+}
+
+html {
+  overflow-y: scroll; /*стабилизируем ширину*/
+}
+
+.page-container{
+    display: flex; /* чтобы футер всегда был прижат к низу экрана */
+    flex-direction: column;
+    min-height: 100vh; /* не меньше высоты экрана */ 
+}
+
+.header, .footer{
+    background-image: url('/src/pages/HomePage/pictures/priroda.webp'); 
+    background-color: rgb(185, 200, 200); /*если фото не прогрузится*/
+    background-size: cover; 
+    background-position: center;
+} 
+
+.main{
+    background-color:rgba(0, 0, 0, 0.1);
+    flex:1; /*занимает всё свободное место между шапкой и футером.*/
+}
+
+/*-------------------------------------------  */
+/*extra small <576px*/
+@media (max-width: 576px) {
+    /* .extra-small{background-color:yellow;} */
+    .main-text, .my-text {
+        font-size: 16px;
+    }
+    .main-logo {
+        width: 100px;
+    }
+    .my-title{
+        font-size: 24px;
+    }
+}
+/*small ≥576px*/
+@media (min-width: 576px) and (max-width: 768px) {
+    /* .small{background-color:yellow;} */
+    .main-text, .my-text {
+        font-size: 16px;
+    }
+    .main-logo {
+        width: 100px;
+    }
+    .my-title{
+        font-size: 24px;
+    }
+}
+/*medium ≥768px*/
+@media (min-width: 768px) and (max-width: 992px)  {
+    /* .medium{background-color:yellow;} */
+    .main-text, .my-text {
+        font-size: 16px;
+    }
+    .main-logo {
+        width: 100px;
+    }
+    .my-title{
+        font-size: 24px;
+    }
+}
+/*large ≥992px*/
+@media (min-width: 992px) and (max-width: 1200px){
+    /* .large{background-color:yellow;} */   
+    .main-text, .my-text {
+        font-size: 18px;
+    }
+    .main-logo {
+        width: 113px;
+    }
+    .my-title{
+        font-size: 26px;
+    }
+}
+/*x-large ≥1200px*/
+@media (min-width: 1200px) {
+    /* .x-large{background-color:yellow;} */   
+    .main-text, .my-text  {
+        font-size: 20px;
+    }
+    .main-logo {
+        width: 125px;
+    }
+    .my-title{
+        font-size: 28px;
+    }
+}

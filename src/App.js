@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter} from "react-router-dom";
+import Navbar from './components/Navbar';
+import { useHoodies} from './hooks/useHoodies'
+import AppRoutes from './routes/AppRoutes'
+import { products } from "./data/products";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const {
+        hoodies,
+        addOrDelHoodie,
+        delHoodieById,
+        changeColorById,
+        changeMeasurementsById,
+        changeStripesById,
+    } = useHoodies(products);
+
+    return (
+        <BrowserRouter>
+            <Navbar />
+            <AppRoutes
+                hoodies={hoodies}
+                addOrDelHoodie={addOrDelHoodie}
+                delHoodieById={delHoodieById}
+                changeColorById={changeColorById}
+                changeMeasurementsById={changeMeasurementsById}
+                changeStripesById={changeStripesById}
+            />
+        </BrowserRouter>
+    );
 }
 
 export default App;

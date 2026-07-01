@@ -1,0 +1,17 @@
+ .header{ 
+    border: solid rgba(0, 0, 0, 0.200);
+    border-width: 1px;
+    box-shadow:  4px 6px 50vh rgb(103, 143, 141);
+    /*смещение тени по оси X вправо; смещение тени по оси Y вниз; 50vh — размытие тени, то есть насколько она “расплывается”; 50vh=50% высоты окна.*/
+}
+
+.logo-with-text{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+} 
+.btn-menu, .dropdown-menu{
+    background-color: #d2d6d6da;
+}
+

@@ -1,0 +1,17 @@
+ .footer{ 
+    border: solid rgba(0, 0, 0, 0.200);
+    border-width: 1px;
+    box-shadow:  4px 6px 50vh rgb(31, 53, 46);
+    /*смещение тени по оси X вправо; смещение тени по оси Y вниз; 50vh — размытие тени, то есть насколько она “расплывается”; 50vh=50% высоты окна.*/
+}
+.footer ul {
+    list-style: none;
+    padding: 5px;
+    margin: 5px 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+.footer a {
+    text-decoration: none;
+}
