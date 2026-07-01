@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fluffy_vibe_react/static/css/main.f86cdcb5.css",
-    "main.js": "/fluffy_vibe_react/static/js/main.86cdd20b.js",
+    "main.js": "/fluffy_vibe_react/static/js/main.a8aee65f.js",
     "static/media/Instagram-1.mp4": "/fluffy_vibe_react/static/media/Instagram-1.de0681580aa29a58ccd3.mp4",
     "static/media/dogs.webp": "/fluffy_vibe_react/static/media/dogs.3c9967a84f73130a6f8c.webp",
     "static/media/girl.webp": "/fluffy_vibe_react/static/media/girl.d7dbe292605ba0e81ee5.webp",
@@ -25,10 +25,10 @@
     "static/media/measurements.webp": "/fluffy_vibe_react/static/media/measurements.5271827aa11beaad64a7.webp",
     "index.html": "/fluffy_vibe_react/index.html",
     "main.f86cdcb5.css.map": "/fluffy_vibe_react/static/css/main.f86cdcb5.css.map",
-    "main.86cdd20b.js.map": "/fluffy_vibe_react/static/js/main.86cdd20b.js.map"
+    "main.a8aee65f.js.map": "/fluffy_vibe_react/static/js/main.a8aee65f.js.map"
   },
   "entrypoints": [
     "static/css/main.f86cdcb5.css",
-    "static/js/main.86cdd20b.js"
+    "static/js/main.a8aee65f.js"
   ]
 }
