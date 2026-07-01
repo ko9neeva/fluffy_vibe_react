@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/fluffy_vibe_react/static/css/main.f86cdcb5.css",
+    "main.js": "/fluffy_vibe_react/static/js/main.86cdd20b.js",
+    "static/media/Instagram-1.mp4": "/fluffy_vibe_react/static/media/Instagram-1.de0681580aa29a58ccd3.mp4",
+    "static/media/dogs.webp": "/fluffy_vibe_react/static/media/dogs.3c9967a84f73130a6f8c.webp",
+    "static/media/girl.webp": "/fluffy_vibe_react/static/media/girl.d7dbe292605ba0e81ee5.webp",
+    "static/media/priroda.webp": "/fluffy_vibe_react/static/media/priroda.3801344560239fb1a7d6.webp",
+    "static/media/girl_with_dog-1.webp": "/fluffy_vibe_react/static/media/girl_with_dog-1.8003f90154d09333e5ea.webp",
+    "static/media/cat_and_dog.webp": "/fluffy_vibe_react/static/media/cat_and_dog.dd5ab764b11b67020869.webp",
+    "static/media/girl_with_dog-2.webp": "/fluffy_vibe_react/static/media/girl_with_dog-2.51a940c90bb655733678.webp",
+    "static/media/red_fox.webp": "/fluffy_vibe_react/static/media/red_fox.867b430252506e231692.webp",
+    "static/media/Liska.webp": "/fluffy_vibe_react/static/media/Liska.8418149243996c78b385.webp",
+    "static/media/gray_fox.webp": "/fluffy_vibe_react/static/media/gray_fox.d7b54c85b02fab4835d2.webp",
+    "static/media/stripes.webp": "/fluffy_vibe_react/static/media/stripes.0c7e0ed3a26cf6b43a3d.webp",
+    "static/media/colors.webp": "/fluffy_vibe_react/static/media/colors.49f525529e40ec337892.webp",
+    "static/media/Oscar.webp": "/fluffy_vibe_react/static/media/Oscar.d991038a62d3211c7603.webp",
+    "static/media/Marvel.webp": "/fluffy_vibe_react/static/media/Marvel.790cd1f320a28fbec3cb.webp",
+    "static/media/Aif.webp": "/fluffy_vibe_react/static/media/Aif.985c8c7aa7227bf0d3c2.webp",
+    "static/media/fluffy_vibe_logo.webp": "/fluffy_vibe_react/static/media/fluffy_vibe_logo.796bbe8453c8b49cf7ee.webp",
+    "static/media/size-l.webp": "/fluffy_vibe_react/static/media/size-l.0892bfa088a96cc5b263.webp",
+    "static/media/size_human.webp": "/fluffy_vibe_react/static/media/size_human.0c8f5f4f38d28e459bbf.webp",
+    "static/media/size-m.webp": "/fluffy_vibe_react/static/media/size-m.6ddcde1db081d5dc1f02.webp",
+    "static/media/size-s.webp": "/fluffy_vibe_react/static/media/size-s.5135d45355aa4ba04df5.webp",
+    "static/media/measurements.webp": "/fluffy_vibe_react/static/media/measurements.5271827aa11beaad64a7.webp",
+    "index.html": "/fluffy_vibe_react/index.html",
+    "main.f86cdcb5.css.map": "/fluffy_vibe_react/static/css/main.f86cdcb5.css.map",
+    "main.86cdd20b.js.map": "/fluffy_vibe_react/static/js/main.86cdd20b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f86cdcb5.css",
+    "static/js/main.86cdd20b.js"
+  ]
+}
