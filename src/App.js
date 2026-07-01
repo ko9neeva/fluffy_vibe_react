@@ -15,7 +15,7 @@ function App() {
     } = useHoodies(products);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Navbar />
             <AppRoutes
                 hoodies={hoodies}
