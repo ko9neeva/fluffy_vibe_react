@@ -1,4 +1,4 @@
-import { BrowserRouter} from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Navbar from './components/Navbar';
 import { useHoodies} from './hooks/useHoodies'
 import AppRoutes from './routes/AppRoutes'
@@ -15,7 +15,7 @@ function App() {
     } = useHoodies(products);
 
     return (
-        <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <HashRouter>
             <Navbar />
             <AppRoutes
                 hoodies={hoodies}
@@ -25,7 +25,7 @@ function App() {
                 changeMeasurementsById={changeMeasurementsById}
                 changeStripesById={changeStripesById}
             />
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 

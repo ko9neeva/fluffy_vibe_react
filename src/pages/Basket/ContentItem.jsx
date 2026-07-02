@@ -13,90 +13,91 @@ const ContentItem = (props) => {
 
     return (
         <main className="main">
-            <div className="row px-2 px-md-3 m-4">
-                <div className="order-details col-12 col-md-6 col-lg-4"> 
+            <div className="row m-0">
+                <div className=" order-details col-12 col-md-5 mx-auto mt-3"> 
                     <span>Количество товаров: {hoodiesCount} шт. </span>
                     <span>Стоимость худи: {hoodiesPrice} р. </span>
                     <span>Доплата за вышивку: {stripesPrice} р. </span> 
                     <hr className="m-0 p-0" style={{width: "215px"}}/>    
                     <span>Итого: {hoodiesPrice + stripesPrice} р. </span>   
                     
-                    <button type="button" className="btn-buy btn btn-md btn-outline-secondary">Оформить</button>  
-                              
+                    <button type="button" className="btn-buy btn btn-md btn-outline-secondary">Оформить</button>                               
                 </div>
             </div>
 
-
             {products.map(product => ( 
-                <div key={"table-" + product.size}>       
+                <div className={"table-" + product.size} key={"table-" + product.size}>       
                     {hoodies[product.size].map(hoodie => (
-                        <div key = {"hoodie-" + hoodie.id} className="product-data row">   
-                            <div className = "title-container">
-                                <p className="product-title my-auto"> Худи {product.size}</p>
-                                <button className = "my-square btn-del btn btn-md btn-light p-0" onClick ={() => props.delHoodieById(product.size, hoodie.id)}>
-                                    {"\u2715"}       
-                                </button>
-                            </div>   
+                        // <div key = {"hoodie-" + hoodie.id} className="product-data row">   
+                        <div key = {"hoodie-" + hoodie.id} className="row m-3">  
+                            <div className="product-data col-12 col-md-5 ps-md-5">
+                                <div className = "d-flex justify-content-between align-items-center">
+                                    <p className="product-title my-auto"> Худи {product.size}</p>
+                                    <button className = "my-square btn-del btn btn-md btn-light p-0" onClick ={() => props.delHoodieById(product.size, hoodie.id)}>
+                                        {"\u2715"}       
+                                    </button>
+                                </div>   
 
-                            <div className="my-1">
-                                <img src = {product.picture} alt = {"Худи " + product.size} style={{maxWidth: "215px"}}/>  
-                            </div>
+                                <div className="my-1">
+                                    <img src = {product.picture} alt = {"Худи " + product.size} style={{maxWidth: "215px"}}/>  
+                                </div>
 
-                            <div className = "d-flex flex-wrap align-items-center">  
-                                <select className ="form-select" style={{maxWidth: "185px"}} id = {hoodie.id + "-selector"} value = {hoodie.color} onChange = {(e) => props.changeColorById(product.size, hoodie.id, e.target.value)}>
-                                    {Object.keys(colors).map(color => (
-                                        <option key = {hoodie.id + "-option-" + color}> {color} </option>
-                                    ))}
-                                </select>
-                                <div className ="color-demo my-square" style={{backgroundColor: colors[hoodie.color]}}> </div>
-                            </div>  
+                                <div className = "d-flex flex-wrap align-items-center">  
+                                    <select className ="form-select" style={{maxWidth: "185px"}} id = {hoodie.id + "-selector"} value = {hoodie.color} onChange = {(e) => props.changeColorById(product.size, hoodie.id, e.target.value)}>
+                                        {Object.keys(colors).map(color => (
+                                            <option key = {hoodie.id + "-option-" + color}> {color} </option>
+                                        ))}
+                                    </select>
+                                    <div className ="color-demo my-square" style={{backgroundColor: colors[hoodie.color]}}> </div>
+                                </div>  
 
-                            <div className = "d-flex flex-wrap align-items-center">
-                                <label style={{marginRight: "8px"}} htmlFor={hoodie.id+ "-input-stripes"}>Добавить дополнительно вышивку:</label>
-                                <input className="input-data" id={hoodie.id+ "-input-stripes"} value = {hoodie.stripes} onChange = {(e) => {
-                                    const newValue = e.target.value;
-                                    if (/^[0-9]+$/.test(newValue) || newValue === ''){
-                                        props.changeStripesById(product.size, hoodie.id, newValue);
-                                    }}}> 
-                                </input>  
-                                <label style={{marginLeft: "8px"}} htmlFor={hoodie.id+ "-input-stripes"}>шт.</label> 
-                            </div>
+                                <div className = "d-flex flex-wrap align-items-center">
+                                    <label style={{marginRight: "8px"}} htmlFor={hoodie.id+ "-input-stripes"}>Добавить дополнительно вышивку:</label>
+                                    <input className="input-data" id={hoodie.id+ "-input-stripes"} value = {hoodie.stripes} onChange = {(e) => {
+                                        const newValue = e.target.value;
+                                        if (/^[0-9]+$/.test(newValue) || newValue === ''){
+                                            props.changeStripesById(product.size, hoodie.id, newValue);
+                                        }}}> 
+                                    </input>  
+                                    <label style={{marginLeft: "8px"}} htmlFor={hoodie.id+ "-input-stripes"}>шт.</label> 
+                                </div>
                             
-                            <div className="mt-2 mt-md-1">
-                                <p className = "product-price mb-0"> Цена: {product.price + parseInt('0'+hoodie.stripes) * 1000}  р. </p>
+                                <div className="d-flex mt-1">
+                                    <p className = "product-price mb-0"> Цена: {product.price + parseInt('0'+hoodie.stripes) * 1000}  р. </p>
+                                </div>
                             </div>
                         
                             {product.size =='OneSize' 
                                 ? null 
-                                : <div className = "container-measurements row mt-3"> 
-                                    <div className = "col-12 col-lg-4 p-0">
-                                        <div>
-                                            <p> Снимите мерки с животного (размеры указывать в миллиметрах)</p>
-                                        </div>
-                                        <div> 
-                                            <img className="instruction-measurements" src = {measurementsImg} alt = "Демонстрация мерок"/>
+                                : <div className = "measurements m-0 p-0"> 
+                                    <div className = "row m-0"> 
+                                        <div className = "instruction col-12 col-md-5 ">
+                                            <p> Снимите мерки с животного (размеры указывать в миллиметрах)</p>  
+                                            <img className="instruction-measurements" src = {measurementsImg} alt = "Демонстрация мерок"/>                                         
                                         </div>
                                     </div>
                                     
-                                    <div className="col-12 col-lg-8">
-                                    {measurements.map((measurement, indexM) => (
-                                        <div key = {hoodie.id+ "-measurement-" + indexM} 
-                                        className = "row"> 
-                                            <div className = "col-md-9"> 
-                                                <label htmlFor={hoodie.id+ "-input-measurement-" + indexM}>{measurement} </label>
+                                    <div className = "row m-0">
+                                        <div className="inputs col-12 col-md-5 ps-md-5">
+                                        {measurements.map((measurement, indexM) => (
+                                            <div key = {hoodie.id+ "-measurement-" + indexM} 
+                                            className = "row"> 
+                                                <div className = "col-md-10"> 
+                                                    <label htmlFor={hoodie.id+ "-input-measurement-" + indexM}>{measurement} </label>
+                                                </div>
+                                                <div className = "col-md-2"> 
+                                                    <input className = "input-data" id={hoodie.id+ "-input-measurement-" + indexM} value = {hoodie.measurements[indexM]} onChange = {(e) => {
+                                                        const newValue = e.target.value;
+                                                        if (/^[0-9]+$/.test(newValue) || newValue === '') {
+                                                            let newValues = hoodie.measurements.map((oldValue, indexV) => indexV === indexM 
+                                                                ? newValue
+                                                                : oldValue);
+                                                            props.changeMeasurementsById(product.size, hoodie.id, newValues);}}}>
+                                                    </input>
+                                                </div>
                                             </div>
-                                            <div className = "col-md-3"> 
-                                                <input className = "input-data" id={hoodie.id+ "-input-measurement-" + indexM} value = {hoodie.measurements[indexM]} onChange = {(e) => {
-                                                    const newValue = e.target.value;
-                                                    if (/^[0-9]+$/.test(newValue) || newValue === '') {
-                                                        let newValues = hoodie.measurements.map((oldValue, indexV) => indexV === indexM 
-                                                            ? newValue
-                                                            : oldValue);
-                                                        props.changeMeasurementsById(product.size, hoodie.id, newValues);}}}>
-                                                </input>
-                                            </div>
+                                        ))}
                                         </div>
-                                    ))}
                                     </div>
                                 </div>
                             }               
